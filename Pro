@@ -8,7 +8,7 @@ _get_repolink () {
         echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
     elif [[ $PRO_REPO == "PROBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJJDTKjh=" | base64 -d
     elif [[ $PRO_REPO =~ $regex ]]
     then
         if [[ $PRO_REPO_BRANCH ]]
@@ -18,7 +18,7 @@ _get_repolink () {
             echo "${PRO_REPO}/archive/Pro.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJJDTKjh=" | base64 -d
     fi
 }
 
@@ -26,18 +26,18 @@ _get_repolink () {
 _pro_bot () {
     local zippath
     zippath="Pro.zip"
-    echo "  🔰 Downloading Pro LegendBot Source Code... 🔰"
+    echo "  ♦️ Downloading Pro Invisible-LegendBot Source Code... ♦️"
     wget -q $(_get_repolink) -O "$zippath"
     echo "  📍Unpacking Data...📍"
     PROPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
-    echo " 🏅 Download Complete Now Installing 🏅"
-    echo "  ✨ INSTALLING PRO LEGENDBOT ✨"
+    echo " 💫 Download Complete Now Loding UserBot 💫"
+    echo "  ✨ Loding Powers InvisibleBoy & Legend-X-Pro ✨"
     rm -rf "$zippath"
     sleep 5
     cd $PROPATH
-    echo "    ⚜️Starting Pro Lêɠêɳ̃dẞøt⚜️     "
-    echo " ♥️ NOW WAIT 3 MIN INSTALLING ALL PLUGIN ♥️"
+    echo "    ⚜️Loding Invisible-LegendBot⚜️     "
+    echo " ♥️ RUK JA BHAI HO GYA AAB TU GAND MARDE TG KI JA  ♥️"
 
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     python3 -m userbot
