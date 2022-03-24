@@ -5,10 +5,10 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $PRO_REPO == "PROBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
     elif [[ $PRO_REPO == "PROBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJJDTKjh=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
     elif [[ $PRO_REPO =~ $regex ]]
     then
         if [[ $PRO_REPO_BRANCH ]]
@@ -18,7 +18,7 @@ _get_repolink () {
             echo "${PRO_REPO}/archive/Pro.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJJDTKjh=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
     fi
 }
 
@@ -36,7 +36,7 @@ _pro_bot () {
     rm -rf "$zippath"
     sleep 5
     cd $PROPATH
-    echo "    ⚜️Loding Invisible-LegendBot⚜️     "
+    echo "    🔞Loding Invisible-LegendBot🔞     "
     echo " ♥️ RUK JA BHAI HO GYA AAB TU GAND MARDE TG KI JA  ♥️"
 
     python3 ../setup/updater.py ../requirements.txt requirements.txt
