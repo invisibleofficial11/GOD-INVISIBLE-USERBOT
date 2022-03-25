@@ -1,7 +1,7 @@
 {
   "name":  "☠️ ᴍʀ ✘ ɪɴᴠɪ🅢ɪʙʟᴇ Bot",
   "description": "Tнє Smoothest And Fastest Bot Made By InvisibleOfficial LegendS (@MR_INVISIBLE_OFFICIAL). Made with Love And By Python Java PhP Hack Language With Hardwork... ❤ ",
-  "logo": " https://te.legra.ph/file/b969f967f6f30b0be61e2.jpg",
+  "logo": "https://te.legra.ph/file/996746ae9b0fa48bcbec3.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -49,7 +49,7 @@
       "required" :true
     },
     "YOUR_GROUP": {
-      "description": "Set Your Group Username. By Default It Is (@LegendBot_Pros)",
+      "description": "Set Your Group Username. By Default It Is (@Invisible-LegendBot)",
       "value": "@Invisible_LegendBot",
       "required": false
     },
