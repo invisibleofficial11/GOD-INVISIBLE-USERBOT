@@ -3,41 +3,41 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $invisibleofficial11_REPO == "GOD-INVISIBLE-USERBOT" ]]
+    if [[ $PRO_REPO == "PROBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
-    elif [[ $invisibleofficial11_REPO == "GOD-INVISIBLE-USERBOT" ]]
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0RBUkstTEVHRU5ELVBSTy9QUk8tRFJBR09OUk9CT09UL2FyY2hpdmUvbWFpbi56aXA=" | base64 -d
+    elif [[ $PRO_REPO == "PROBOT" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
-    elif [[ $invisibleofficial11_REPO =~ $regex ]]
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0RBUkstTEVHRU5ELVBSTy9QUk8tRFJBR09OUk9CT09UL2FyY2hpdmUvbWFpbi56aXA=" | base64 -d
+    elif [[ $PRO_REPO =~ $regex ]]
     then
-        if [[ $invisibleofficial11_REPO_BRANCH ]]
+        if [[ $PRO_REPO_BRANCH ]]
         then
-            echo "${invisibleofficial11_REPO}/archive/${main_REPO_BRANCH}.zip"
+            echo "${PRO_REPO}/archive/${PRO_REPO_BRANCH}.zip"
         else
-            echo "${invisibleofficial11_REPO}/archive/main.zip"
+            echo "${PRO_REPO}/archive/Pro.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXAlghdiJ3JDTKjh=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0RBUkstTEVHRU5ELVBSTy9QUk8tRFJBR09OUk9CT09UL2FyY2hpdmUvbWFpbi56aXA=" | base64 -d
     fi
 }
 
 
 _pro_bot () {
     local zippath
-    zippath="main.zip"
-    echo "  ♦️ Downloading Pro Invisible-LegendBot Source Code... ♦️"
+    zippath="Pro.zip"
+    echo "  🔰 Downloading Pro DragonBot Source Code... 🔰"
     wget -q $(_get_repolink) -O "$zippath"
     echo "  📍Unpacking Data...📍"
-    invisibleofficial11PATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    PROPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
-    echo " 💫 Download Complete Now Loding UserBot 💫"
-    echo "  ✨ Loding Powers InvisibleBoy & Legend-X-Pro ✨"
+    echo " 🏅 Download Complete Now Installing 🏅"
+    echo "  ✨ INSTALLING PRO DRAGONBOT ✨"
     rm -rf "$zippath"
     sleep 5
-    cd $invisibleofficial11PATH
-    echo "    🔞Loding Invisible-LegendBot🔞     "
-    echo " ♥️ RUK JA BHAI HO GYA AAB TU GAND MARDE TG KI JA  ♥️"
+    cd $PROPATH
+    echo "    ⚜️Starting Pro Dragonẞøt⚜️     "
+    echo " ♥️ NOW WAIT 3 MIN INSTALLING ALL PLUGIN ♥️"
 
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     python3 -m userbot
